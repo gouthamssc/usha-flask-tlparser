@@ -1,0 +1,66 @@
+<!doctype html>
+<head><style>
+h2 {text-align: center;}
+h3 {text-align: center;}
+p {text-align: center;}
+title {text-align: center;}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.button1 {background-color: #4CAF50;}
+.button {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
+}
+.wrapper {
+    text-align: center;
+}
+.message {
+    text-align: center;
+}
+</style></head>
+
+<title>Python Flask File Upload Example</title>
+<img src="static/uploads/usha-clg.png"  class="center" width="200" height="200">
+
+<h2>Comparative Programming Language</h2>
+<h3>USHA MUNDRA</h3>
+<h3>2814400</h3>
+<form method="post" action="/" enctype="multipart/form-data">
+    <dl>
+		<p>
+			<input type="file" name="file" autocomplete="off" required>
+		</p>
+    </dl>
+<div class="wrapper">
+	<button class="button button1">Submit</button>
+
+</div>
+</form>
+
+<div class="message">
+<p>
+	{% with messages = get_flashed_messages() %}
+	  {% if messages %}
+		<ul class=flashes>
+		{% for message in messages %}
+		  <li>{{ message }}</li>
+		{% endfor %}
+		</ul>
+	  {% endif %}
+	{% endwith %}
+</p>
+</div>
+
